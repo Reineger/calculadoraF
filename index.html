@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="./main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+</head>
+<body>
+    <section class="container">
+        <div class="calculator">
+            <div class="heading">
+                <h3>Calculadora de Interes Compuesto</h3>
+                <small>proyecciones de tu dinero en el tiempo </small>
+            </div>
+            <form class="compound-form">
+                <div class="input-group">
+                    <label for="initialamount">Monto a Invertir</label>
+                    <input type="number" id="initialamount" />
+                </div>
+                <div class="input-group">
+                    <label for="years">Numero de Años</label>
+                    <input type="number" id="years" />
+                </div>
+                <div class="input-group">
+                    <label for="rates">Interes Esperado</label>
+                    <input type="number" id="rates" />
+                </div>
+                <div class="input-group">
+                    <label for="rates">Intervalos de Tiempo</label>
+                    <select id="compound">
+                        <option value="1">Anual</option>
+                        <option value="4">Semestral</option>
+                        <option value="2">Trimestral</option>
+                        <option value="12">Mensual</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <button>Simular</button>
+                </div>
+            </form>
+        </div>
+        <div class="results">
+            <h3 id="message"></h3>
+            <canvas id="data-set"></canvas>
+        </div>
+    </section>
+    <script src="./app.js"></script>
+</body>
+</html>
