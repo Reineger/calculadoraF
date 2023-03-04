@@ -11,7 +11,7 @@ const message = document.getElementById("message");
 
 //BOTON CALCULADOR
 const button = document.querySelector(".input-group button");
-//LISTENER
+//LISTENER: Ingreso de datos y conexion a variables asignadas
 button.addEventListener("click", calculateGrowth);
 
 const data = [];
@@ -35,7 +35,7 @@ function calculateGrowth(e) {
             growth = toDecimal(final, 2);
         }
         //
-        message.innerText = `Tendras esta cantidad $ ${growth} despues de ${period} años`;
+        message.innerText = `Tendras $ ${growth} despues de ${period} años al ${interest}% de interes`  ;
         drawGraph();
     } catch (error) {
         console.error(error);
